@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Shopping Cart</title>
+    <style>
+        /* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 5PX;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header nav li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Styles */
+
+.hero {
+    background-color: #fd7070;
+    background-size: 100% 300px;
+    background-position: 0% 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Features Styles */
+
+.features {
+    background-color: #f7f7f7;
+    padding: 40px;
+}
+
+.features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features li {
+    margin-bottom: 20px;
+}
+
+.features i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.features h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Call to Action Styles */
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 
+}
+
+/* Call to Action Styles */
+
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.cta button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+/* Pricing Section Styles */
+
+.pricing {
+    background-color: #f7f7f7;
+    padding: 40px;
+    align-items: center;
+}
+
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pricing p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.pricing-tables {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-table {
+    background-color: #fff;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-table h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.pricing-table p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pricing-table ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.pricing-table li {
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.pricing-table button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Contact Section Styles */
+
+.contact {
+    background-color: #f7f7f7;
+    padding: 40px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+#contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 48%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#contact-form button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #444;
+}
+
+.pricing-table button:hover {
+    background-color: #444;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .hero {
+        height: 50vh;
+    }
+    .features ul {
+        flex-wrap: wrap;
+    }
+    .features li {
+        width: 50%;
+        margin-bottom: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="PT\Screenshot 2024-08-01 154028.png" alt="logo" style="height: 45px; width: 150px; border-radius: 5px; float: left; justify-content: space-evenly;">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#Pricing">Pricing</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+       
+        <div class="container">
+            <h1>Introducing the Smart Shopping Cart</h1><br>
+            <br>
+            <p> Revolutionize your grocery shopping experience with our Smart Shopping Cart.<br> Scan items quickly and easily, and let our AI-powered system suggest relevant products.<br> Navigate the store in the most efficient order with our smart route optimization. Check inventory <br>levels in real-time to avoid out-of-stock items.<br> Pay with ease using our mobile payment integration. Save time and <br>reduce frustration with our innovative smart cart technology.</p>
+            <br>
+            <h2>
+                TEAM:
+            </h2>
+            <h4>FOUNDER / CEO: RAHUL RATHORE</h4>
+            <h4>CO-FOUNDER: PRATEEK KUSHWAH</h4> <br>
+            <button class="btn-primary">Learn More</button>
+        </div>
+        <img src="PT\Untitled (1).png" alt="img" style="width: 480px; height: 520px; right: 0px; position: absolute;">
+    </section>
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>What makes our cart so smart?</h2>
+            <ul>
+                <li>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Self-Checkout</h3>
+                    <p>Scan and pay with your phone, no lines or cashiers needed</p>
+                </li>
+                <li>
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Personalized Recommendations</h3>
+                    <p>Get tailored suggestions based on your shopping habits</p>
+                </li>
+                <li>
+                    <i class="fas fa-box-open"></i>
+                    <h3>Inventory Tracking</h3>
+                    <p>Never run out of your favorite items again</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+<section class="pricing" id="Pricing">
+    <div class="container">
+        <h2>Choose Your Plan</h2>
+        <p>Select the plan that best fits your business needs</p>
+        <div class="pricing-tables">
+            <div class="pricing-table">
+                <h3>Basic</h3>
+                <p>$29.99/month</p>
+                <ul>
+                    <li>1 products</li>
+                    <li>Basic support</li>
+                </ul>
+                <button class="btn-primary">Sign Up</button>
+            </div>
+            <div class="pricing-table">
+                <h3>Premium</h3>
+                <p>$49.99/month</p>
+                <ul>
+                    <li>5 products</li>
+                    <li>Prioritized support</li>
+                </ul>
+                <button class="btn-primary">Sign Up</button>
+            </div>
+            <div class="pricing-table">
+                <h3>Enterprise</h3>
+                <p>Custom pricing</p>
+                <ul>
+                    <li>Unlimited products</li>
+                    <li>Dedicated support</li>
+                </ul>
+                <button class="btn-primary">Contact Us</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="Contact">
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Have a question or want to learn more? We'd love to hear from you!</p>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +91 7505238914</p>
+            <p><i class="fas fa-envelope"></i> <a href="rahulrathore39769@gmail.com">rahulrathore39769@gmail.com</a></p>
+        </div>
+        <form id="contact-form">
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="message" placeholder="Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Get Your Smart Shopping Cart Today!</h2>
+            <button class="btn-primary">Order Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Smart Shopping Cart. All rights reserved.</p>
+    </footer>
+
+    <script >
+document.querySelector('.hero button').addEventListener('click', function() {
+    document.querySelector('.features').scrollIntoView({ behavior: 'smooth' });
+});
+
+
+document.querySelector('.cta button').addEventListener('click', function() {
+    alert('Demo sign-up form will open here');
+});
+
+
+document.querySelectorAll('.pricing-table button').forEach(function(button) {
+    button.addEventListener('click', function() {
+        alert('Sign-up or contact us form will open here');
+    });
+});
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Form submitted successfully!');
+});
+    </script>
+</body>
+</html>
